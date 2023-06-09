@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta charset="utf-8" />
+	<title>xfinity</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0" />
+	<link rel="icon" type="image/png" href="favicon.png" />
+	<link rel="icon" type="image/x-icon" href="favicon.ico" />
+	<link rel="stylesheet" href="css/normalize.css" />
+	<link rel="stylesheet" href="css/main.css" />
+	<script>window.jQuery || document.write('<script src="js/jquery-1.11.3.min.js"><\/script>')</script>
+	<script type="text/javascript" src="js/functions.js"></script>
+ </head>
+
+<body>
+
+	<header class="align_center">
+		<div class="header_logo">
+			<a href="#" id="img_logo" data-ytta-id="-"><img alt="Xfinity logo" src="img/xfinity_logo.png"></a>
+		</div>
+		<div class="header_intro">
+			<h3 class="font_thin">Choose the package that’s right for you</h3>
+			<p class="font_light">Click the cards below to see the best deals in TV and Internet</p>
+		</div>
+	</header>
+
+	<!-- Popup -->
+	<div id="screen_overlay"></div>
+	<div id="popup_outer_container">
+        <div id="popup_exit"><img src="img/exit_btn.png" alt="Close" /></div>
+	</div>
+
+	<div id="packages">
+		<div class="wrapper clearfix align_center">
+			<div class="block_1_of_3">
+				<h3 class="font_light">Internet Plus</h3>
+				<div class="flip_container">
+					<div class="flip_card">
+						<div class="flip_front">
+							<div class="flip_img"><img src="img/flip.png" alt="flip" /></div>
+							<h3 class="font_light"><sup>$</sup>49<sup>99</sup></h3>
+							<h4 class="font_reg">Per month for 12 months<br>No term agreement</h4>
+							<p class="font_med">Local channels</p>
+							<p class="font_med">Speeds up to 25 Mbps —<br><span class="font_reg">great for 1-2 devices</span></p>
+							<div class="channel_img"><img src="img/channels_1.png" alt="Channels" /></div>
+						</div>
+						<div class="flip_back">
+							<div class="flip_img"><img src="img/flip_2.png" alt="flip" /></div>
+							<h3 class="font_light"><sup>$</sup>49<sup>99</sup></h3>
+							<h4 class="font_reg">Per month for 12 months<br>No term agreement</h4>
+							<p class="font_med">Stream multiple TV shows,<br> share photos, social network and<br> surf the Web.</p>
+							<div class="channel_img"><img src="img/devices_1.png" alt="Channels" /></div>
+						</div>
+					</div>
+				</div>
+				<a href="#" class="cta_button font_reg">Add to cart</a>
+				<div class="details_links">
+					<a class="popup_link">Pricing &amp; Other Info.</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.xfinity.com/Corporate/Learn/DigitalCable/TVChannelLineUp.html" target="_blank">Channel Lineup</a>
+				</div>
+			</div>
+			<div class="block_1_of_3">
+				<h3 class="font_light">Blast!&reg; Plus</h3>
+				<div class="flip_container">
+					<div class="flip_card">
+						<div class="flip_front">
+							<div class="flip_img"><img src="img/flip.png" alt="flip" /></div>
+							<h3 class="font_light"><sup>$</sup>59<sup>99</sup></h3>
+							<h4 class="font_reg">Per month for 12 months<br>No term agreement</h4>
+							<p class="font_med">45 channels</p>
+							<p class="font_med">Speeds up to 75 Mbps —<br><span class="font_reg">great for 3-5 devices</span></p>
+							<div class="channel_img"><img src="img/channels_2.png" alt="Channels" /></div>
+						</div>
+						<div class="flip_back">
+							<div class="flip_img"><img src="img/flip_2.png" alt="flip" /></div>
+							<h3 class="font_light"><sup>$</sup>59<sup>99</sup></h3>
+							<h4 class="font_reg">Per month for 12 months<br>No term agreement</h4>
+							<p class="font_med">Stream and download HD TV shows,<br> share photos and videos,<br> and video chat.</p>
+							<div class="channel_img"><img src="img/devices_2.png" alt="Channels" /></div>
+						</div>
+					</div>
+				</div>
+				<a href="#" class="cta_button font_reg">Add to cart</a>
+				<div class="details_links">
+					<a class="popup_link">Pricing &amp; Other Info.</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.xfinity.com/Corporate/Learn/DigitalCable/TVChannelLineUp.html" target="_blank">Channel Lineup</a>
+				</div>
+			</div>
+			<div class="block_1_of_3">
+				<h3 class="font_light">X1 Starter Double Play&reg;</h3>
+				<div id="visa_offer" class="font_med">Get a FREE $XX Visa&reg; Prepaid Card</div>
+				<div class="flip_container">
+					<div class="flip_card">
+						<div class="flip_front">
+							<div class="flip_img"><img src="img/flip.png" alt="flip" /></div>
+							<h3 class="font_light"><sup>$</sup>89<sup>99</sup></h3>
+							<h4 class="font_reg">Per month for 24 months<br>With 2-year agreement</h4>
+							<p class="font_med">140 channels</p>
+							<p class="font_med">Speeds up to 75 Mbps —<br><span class="font_reg">great for 3-5 devices</span></p>
+							<div class="channel_img"><img src="img/channels_3.png" alt="Channels" /></div>
+						</div>
+						<div class="flip_back">
+							<div class="flip_img"><img src="img/flip_2.png" alt="flip" /></div>
+							<h3 class="font_light"><sup>$</sup>89<sup>99</sup></h3>
+							<h4 class="font_reg">Per month for 24 months<br>With 2-year agreement</h4>
+							<p class="font_med">Stream multiple HD movies and TV<br> shows, play multi-player online games<br> and video conference.</p>
+							<div class="channel_img"><img src="img/devices_2.png" alt="Channels" /></div>
+						</div>
+					</div>
+				</div>
+				<a href="#" class="cta_button font_reg">Add to cart</a>
+				<div class="details_links">
+					<a class="popup_link">Pricing &amp; Other Info.</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.xfinity.com/Corporate/Learn/DigitalCable/TVChannelLineUp.html" target="_blank">Channel Lineup</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="features" class="align_center">
+		<h3 class="font_extlight">Plus enjoy the following FREE features included in all the XFINITY packages above:</h3>
+		<div class="wrapper clearfix">
+			<div class="block_1_of_5">
+				<img src="img/feature_1.png" alt="The fastest in-home WiFi" />
+				<p>The fastest<br> in-home WiFi</p>
+			</div>
+			<div class="block_1_of_5">
+				<img src="img/feature_2.png" alt="XFINITY TV Go app" />
+				<p>XFINITY TV Go app</p>
+			</div>
+			<div class="block_1_of_5">
+				<img src="img/feature_3.png" alt="Access to millions of hotspots nationwide" />
+				<p>Access to millions of<br> hotspots nationwide</p>
+			</div>
+			<div class="block_1_of_5">
+				<img src="img/feature_4.png" alt="WiFi" />
+				<p>30-Day Money-Back<br> Guarantee&trade;</p>
+			</div>
+			<div class="block_1_of_5">
+				<img src="img/feature_5.png" alt="Norton&trade; Security Suite" />
+				<p>Norton&trade; Security Suite</p>
+			</div>
+		</div>
+	</div>
+
+	<div id="steps" class="align_center">
+		<h3 class="font_extlight">Get the latest shows and blazing speeds in 3 easy steps</h3>
+		<div class="wrapper clearfix align_center">
+			<div class="block_1_of_3">
+				<div class="step_number font_light">1</div>
+				<p class="font_med">Choose your deal</p>
+				<p>Select the package that’s right for you<br> and sign up today.</p>
+			</div>
+			<div class="block_1_of_3">
+				<div class="step_number font_light">2</div>
+				<p class="font_med">Set up your service</p>
+				<p>Schedule a home installation or use our<br> convenient self-installation kit.</p>
+			</div>
+			<div class="block_1_of_3">
+				<div class="step_number font_light">3</div>
+				<p class="font_med">Experience the best in entertainment</p>
+				<p>Watch, stream and surf to your heart’s<br> content with your new XFINITY service.</p>
+			</div>
+		</div>
+		<a href="#" class="cta_button font_reg">See deals</a>
+	</div>
+
+	<footer>
+		<div class="wrapper">
+			<p>Want Internet only? <a href="#" title="Click here">Click here</a></p>
+			<p>Do you need Comcast Business Service?  <a href="#" title="Click here">Click here</a></p>
+			<p class="footnote"><sup>1</sup> Availability of top 100 shows varies based on service tier.</p>
+			<p class="footnote">&copy; Comcast 2015</p>
+		</div>
+	</footer>
+
+</body>
+</html>

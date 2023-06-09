@@ -1,0 +1,587 @@
+/* ==========================================================================
+========================================================================== */
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #000000;
+    font-family: 'XFINITY Sans Regular', Arial, sans-serif
+}
+html {
+    font-size: 16px;
+    line-height: 1.4
+}
+html,
+body {
+    height: 100%
+}
+audio, canvas, img, video {
+    vertical-align: middle;
+}
+header {
+    width: 100%;
+    background-color: #000;
+}
+footer {
+    width: 100%;
+    font-size: 12px;
+    color: #000000;
+    padding: 50px 0;
+}
+h1,
+h2,
+h3 {
+    font-weight: normal;
+}
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+*,
+:before,
+:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+/* ==========================================================================
+   Fonts
+   ========================================================================== */
+
+@font-face {
+  font-family: "XFINITY Sans Thin";
+  src: url(../font/04f41bfc-5962-46fd-bcfe-436deacc68e6-2.eot);
+  src: url(../font/04f41bfc-5962-46fd-bcfe-436deacc68e6-2.eot?) format("embedded-opentype"),
+       url(../font/04f41bfc-5962-46fd-bcfe-436deacc68e6-3.woff) format("woff"),
+       url(../font/04f41bfc-5962-46fd-bcfe-436deacc68e6-1.ttf) format("truetype");
+  font-style: ;
+  font-weight: ;
+}
+@font-face {
+  font-family: "XFINITY Sans Light";
+  src: url(../font/5400139b-335e-422f-a815-0324223cd09d-2.eot);
+  src: url(../font/5400139b-335e-422f-a815-0324223cd09d-2.eot?) format("embedded-opentype"),
+       url(../font/5400139b-335e-422f-a815-0324223cd09d-3.woff) format("woff"),
+       url(../font/5400139b-335e-422f-a815-0324223cd09d-1.ttf) format("truetype");
+  font-style: ;
+  font-weight: ;
+}
+@font-face {
+  font-family: "XFINITY Sans Extra Light";
+  src: url(../font/46b9d079-dfd3-4e40-aa92-5b289b9e46a9-2.eot);
+  src: url(../font/46b9d079-dfd3-4e40-aa92-5b289b9e46a9-2.eot?) format("embedded-opentype"),
+       url(../font/46b9d079-dfd3-4e40-aa92-5b289b9e46a9-3.woff) format("woff"),
+       url(../font/46b9d079-dfd3-4e40-aa92-5b289b9e46a9-1.ttf) format("truetype");
+  font-style: ;
+  font-weight: ;
+}
+@font-face {
+  font-family: "XFINITY Sans Regular";
+  src: url(../font/d691965a-118c-4e73-8eae-a4471dcbf379-2.eot);
+  src: url(../font/d691965a-118c-4e73-8eae-a4471dcbf379-2.eot?) format("embedded-opentype"),
+       url(../font/d691965a-118c-4e73-8eae-a4471dcbf379-3.woff) format("woff"),
+       url(../font/d691965a-118c-4e73-8eae-a4471dcbf379-1.ttf) format("truetype");
+  font-style: ;
+  font-weight: ;
+}
+@font-face {
+  font-family: "XFINITY Sans Medium";
+  src: url(../font/b6f1613d-8ed2-49c5-a91c-df4226edacbc-2.eot);
+  src: url(../font/b6f1613d-8ed2-49c5-a91c-df4226edacbc-2.eot?) format("embedded-opentype"),
+       url(../font/b6f1613d-8ed2-49c5-a91c-df4226edacbc-3.woff) format("woff"),
+       url(../font/b6f1613d-8ed2-49c5-a91c-df4226edacbc-1.ttf) format("truetype");
+  font-style: ;
+  font-weight: ;
+}
+
+.font_thin {
+    font-family: 'XFINITY Sans Thin', Arial, sans-serif;
+}
+.font_light {
+    font-family: 'XFINITY Sans Light', Arial, sans-serif;
+}
+.font_extlight {
+    font-family: 'XFINITY Sans Extra Light', Arial, sans-serif;
+}
+.font_reg {
+    font-family: 'XFINITY Sans Regular', Arial, sans-serif;
+}
+.font_med {
+    font-family: 'XFINITY Sans Medium', Arial, sans-serif;
+}
+
+/* ==========================================================================
+   Main classes
+   ========================================================================== */
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *  `contenteditable` attribute is included anywhere else in the document.
+ *  Otherwise it causes space to appear at the top and bottom of elements
+ *  that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *  `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before, .clearfix:after {
+    content: " ";
+    /* 1 */
+    
+    display: table/* 2 */
+}
+.clearfix:after {
+    clear: both
+}
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.clearfix {
+ *zoom: 1
+}
+body.modal_open {
+    overflow: hidden;
+}
+.clear {
+    clear: both
+}
+.wrapper {
+    width: 960px;
+    margin: 0 auto
+}
+.float_left {
+    float: left;
+}
+.float_right {
+    float: right;
+}
+.align_center {
+    text-align: center;
+}
+.desktop_display {
+    display: block;
+    visibility: visible
+}
+.mobile_display {
+    display: none;
+    visibility: hidden;
+}
+.fluid_row {
+    width: 100%;
+}
+.header_logo {
+    background-color: #000000;
+    line-height: 50px;
+}
+.header_intro {
+    height: auto;
+    background: url(../img/header_bgr.jpg) no-repeat center center;
+    background-color: #132a30;
+    background-size: cover;
+    color: #ffffff;
+    padding: 25px;
+}
+.header_intro h3 {
+    font-size: 44px;
+    margin: 0;
+}
+.header_intro p {
+    font-size: 18px;
+    margin: .7em;
+}
+#packages {
+    padding-top: 30px;
+    background-color: #f1f1f1;
+}
+.block_1_of_3 {
+    position: relative;
+    float: left;
+    width: 300px;
+    margin: 0 10px;
+}
+.block_1_of_3 h3 {
+    font-size: 24px;
+    margin: 15px 0;
+    color: #000000;
+}
+/* entire container, keeps perspective */
+.flip_container {
+    -webkit-perspective: 1000;
+    -moz-perspective: 1000;
+    -o-perspective: 1000;
+    perspective: 1000;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+.flip_container:hover {
+    -webkit-transform: translateY(-5px);
+    -moz-transform: translateY(-5px);
+    -o-transform: translateY(-5px);
+    transform: translateY(-5px);
+}
+.flip_card {
+    position: relative;
+    width: 300px;
+    height: 330px;
+    cursor: pointer;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+.flip_card:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0;
+    box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
+    transition: opacity 0.3s ease-in-out;
+}
+.flip_card:hover:after {
+    opacity: 1;
+}
+.flip_front,
+.flip_back {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.flip_front {
+    background-color: #ffffff;
+    z-index: 2;
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -o-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+}
+.flip_back {
+    background-color: #fafafa;
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+.flip_card.flipped {
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+/* IE hack */
+@media screen and (min-width:0\0) {
+    .flip_front,
+    .flip_back {
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;        
+    }
+    .flip_card.flipped {
+        -webkit-transform: rotateY(0deg);
+        -moz-transform: rotateY(0deg);
+        -o-transform: rotateY(0deg);
+        transform: rotateY(0deg);    
+    }
+    .flip_card.flipped .flip_front {
+        -webkit-transform: rotateY(180deg);
+        -moz-transform: rotateY(180deg);
+        -o-transform: rotateY(180deg);
+        transform: rotateY(180deg);
+    }
+    .flip_card.flipped .flip_back {
+        -webkit-transform: rotateY(0deg);
+        -moz-transform: rotateY(0deg);
+        -o-transform: rotateY(0deg);
+        transform: rotateY(0deg);    
+    }
+}
+.flip_card h3 {
+    font-size: 60px;
+    margin: 0;
+    padding-top: 20px;
+    color: #2d2d2d;
+}
+.flip_card h3 sup {
+    font-size: 35px;
+}
+.flip_card h4 {
+    font-size: 12px;
+    color: #8c8c8c;
+    margin: 0 0 55px;
+}
+.flip_card h4:after {
+    content: "";
+    position: absolute;
+    left: 70px;
+    top: 165px;
+    height: 1px;
+    width: 160px;
+    border-bottom: 1px solid #8c8c8c;
+}
+.flip_card p {
+    margin: .25em;
+    color: #8c8c8c;
+}
+.flip_img {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.channel_img {
+    margin-top: 20px;
+}
+.cta_button {
+    display: block;
+    width: 160px;
+    margin: 20px auto;
+    font-size: 15px;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #00a3e0;
+    padding: 15px 20px;
+    border-radius: 30px;
+    transition: background-color 300ms;
+}
+.cta_button:hover {
+    color: #00a3e0;
+    background-color: #ffffff;
+    border: 1px solid #00a3e0;
+    padding: 14px 19px;
+}
+.details_links {
+    color: #8c8c8c;
+    margin-bottom: 40px;
+}
+.details_links a {
+    font-size: 14px;
+    color: #00a3e0;
+    text-decoration: none;
+}
+#visa_offer {
+    position: absolute;
+    top: -10px;
+    text-align: center;
+    width: 100%;
+    font-size: 14px;
+    color: #00a3e0;
+}
+#features {
+    padding-top: 34px;
+    color: #59595c;
+}
+#features h3 {
+    font-size: 28px;
+    margin: 0;
+}
+.block_1_of_5 {
+    float: left;
+    width: 152px;
+    margin: 20px;
+}
+#steps {
+    padding-top: 34px;
+    height: 370px;
+    background: url(../img/steps_bgr.jpg) no-repeat center center;
+    background-size: cover;
+}
+#steps h3 {
+    color: #e5e5e5;
+    font-size: 28px;
+    margin: 0;
+}
+#steps p {
+    color: #f8f8f8;
+    margin: .5em 0;
+}
+.step_number {
+    width: 60px;
+    height: 60px;
+    margin: 30px auto 20px;
+    font-size: 30px;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    border-radius: 30px;
+    padding: 6px 0 0 1px;
+}
+footer {
+    background-color: #f1f1f1;
+}
+footer p {
+    color: #3b3b3b;
+    font-size: 15px;
+}
+footer a {
+    color: #00a3e0;
+}
+.footnote {
+    font-size: 12px;
+    color: #000000;
+}
+
+/* Popup */
+.popup_link {
+    cursor: pointer;
+}
+#screen_overlay {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: black;
+    opacity: 0.7;
+    z-index: 99;
+    top: 0;
+}
+#popup_outer_container {
+    display: none;
+    width: 710px;
+    height: 500px;
+    position: fixed;
+    z-index: 100;
+    left: 50%;
+    top: 50%;
+    margin-left: -355px;
+    margin-top: -250px;
+    background-color: #ffffff;
+}
+#popup_exit {
+    position: absolute;
+    right: -12px;
+    top: -12px;
+    cursor: pointer;
+    z-index: 101;
+}
+
+@media screen and (max-width: 768px) {
+    .header_intro {
+        background: url(../img/header_bgr_m.jpg) no-repeat center center;
+        background-size: cover;
+        padding: 20px 10px;
+    }
+    .header_intro h3 {
+        font-size: 32px;
+    }
+    .header_intro p {
+        font-size: 16px;
+    }
+    .wrapper {
+        width: 300px;
+    }
+    #packages {
+        padding-top: 0;
+    }
+    #packages .block_1_of_3 {
+        float: none;
+        position: relative;
+        margin: 0 auto;
+        padding-bottom: 30px;
+    }
+    #packages .block_1_of_3:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 1px;
+        width: 300px;
+        border-bottom: 1px solid #bebebe;
+    }
+    #packages .block_1_of_3:last-child:after {
+        border: none;
+    }
+    .block_1_of_3 h3 {
+        margin: 25px 0 15px;
+    }
+    .flip_container:hover {
+        -webkit-transform: none;
+        -moz-transform: none;
+        -o-transform: none;
+        transform: none;
+    }
+    .flip_card:after {
+        opacity: 1;
+    }
+    .flip_card h3 {
+        margin: 0;
+    }
+    .details_links {
+        margin-bottom: 0;
+    }
+    .cta_button {
+        width: 260px;
+    }
+    #visa_offer {
+        position: relative;
+    }
+    #features {
+        padding: 30px 0;
+    }
+    #features h3,
+    #steps h3 {
+        font-size: 24px;
+        margin: 0 10px;
+    }
+    #features p {
+        font-size: 14px;
+        margin: 0 0 20px;
+    }
+    #steps p {
+        font-size: 14px;
+    }
+    .step_number {
+        font-size: 24px;
+        width: 50px;
+        height: 50px;
+    }
+    .block_1_of_5 {
+        float: none;
+        margin: 0 auto;
+    }
+    #steps {
+        height: auto;
+        background: url(../img/steps_bgr_m.jpg) no-repeat center center;
+        background-size: cover;
+        padding-bottom: 20px;
+    }
+    #steps .block_1_of_3 {
+        margin: 0 auto;
+        padding-bottom: 0;
+    }
+    footer p {
+        font-size: 12px;
+    }
+    .footnote {
+        font-size: 10px;
+    }
+    /* Popup */
+    /* Popup */
+    #popup_outer_container {
+        width: 90%;
+        height: 400px;
+        margin-left: -45%;
+        margin-top: -200px;
+    }
+}
